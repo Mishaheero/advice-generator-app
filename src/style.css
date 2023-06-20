@@ -1,0 +1,177 @@
+/* Reset box model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default heading margins */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* Reset anchor styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Remove underline on links */
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+/* Remove default button styles */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Remove default form field styles */
+input,
+textarea,
+select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+/* Set default font styles */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: hsl(218, 23%, 16%);
+  height: 100vh;
+  font-size: 28px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+}
+
+/* styles app */
+
+.container {
+  max-width: 1440px;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.my-app {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: hsl(217, 19%, 24%);
+  padding: 4rem;
+  max-width: 600px;
+  margin: auto auto;
+  border-radius: 10px;
+}
+
+#text-id {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: hsl(150, 100%, 66%);
+  font-size: 14px;
+  letter-spacing: 4px;
+  font-weight: 400;
+}
+
+.content {
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #fff;
+}
+
+.btn {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-color: hsl(150, 100%, 66%);
+  transition: box-shadow 900ms;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 24px 0px rgb(82, 255, 168);
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: rotate 1s linear infinite;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 18px;
+  }
+  .my-app {
+    max-width: 375px;
+    padding: 2rem;
+  }
+
+  #pattern {
+    margin-bottom: 1rem;
+  }
+
+  .content {
+    margin-bottom: 2rem;
+  }
+
+  #text-id {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .my-app {
+    max-width: 300px;
+  }
+
+  #text-id {
+    font-size: 12px;
+  }
+}
